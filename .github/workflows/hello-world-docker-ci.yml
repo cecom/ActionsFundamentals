@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.3.0
 
+      - name: List Files
+        run: tree
+
       - name: Run my own container action
         id: hello-action
         uses: ./hello-world-docker-action
