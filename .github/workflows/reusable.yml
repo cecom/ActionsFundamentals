@@ -17,10 +17,10 @@ jobs:
   reusable-job:
     runs-on: ubuntu-latest
     outputs:
-      current-time: ${{ steps.time.outputs.time }}
+      current-time: ${{ steps.time.outputs.the_time }}
     steps:
       - name: Greet someone
         run: echo "Hello ${{ inputs.who-to-greet }}"
       - name: Set time
         id: time
-        run: echo "time=$(date)" >> $GITHUB_OUTPUT
+        run: echo "the_time=$(date)" >> $GITHUB_OUTPUT
